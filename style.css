@@ -624,17 +624,172 @@ html, body {
 }
 
 section {
-  display: none;
+    display: none;
+}
+
+section#home {
+    display: block;
 }
 
 section:target {
-  display: block;
+    display: block;
 }
 
-body:not(:has(section:target)) #home {
-  display: block;
+:has(section:target:not(#home)) #home {
+    display: none;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.home-circle-section {
+  position: relative;
+  background: #7fa1b8;
+  padding: 80px 20px;
+  display: grid;
+  place-items: center; 
+  overflow: hidden;
+}
+
+.circle-bg {
+  width: 780px;
+  height: 780px;
+  background: #4f7697;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.circle-content {
+  width: 660px;
+  height: 660px;
+  background: #e9eef2;
+  border-radius: 50%;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.decor {
+  position: absolute;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1; 
+  opacity: 0.95;
+}
+
+.decor-top-left {
+  width: 120px;
+  top: 20px;
+  left: 20px;
+}
+
+.decor-top-right {
+  width: 90px;
+  top: 40px;
+  right: 60px;
+}
+
+.decor-bottom-left {
+  width: 100px;
+  bottom: 40px;
+  left: 40px;
+}
+
+.decor-bottom-right {
+  width: 150px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-content {
+    background: linear-gradient(to bottom, #7da7d9, #99badd);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    min-height: 150px;
+}
+
+.header-title {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    line-height: 0.9;
+    font-weight: normal;
+}
+
+
+
+
+.nav {
+    background-color: #1a3d7c;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 5%;
+}
+
+.nav-tab {
+    background-color: white;
+    color: #1a3d7c;
+    text-decoration: none;
+    padding: 8px 40px;
+    font-weight: bold;
+    border-radius: 2px;
+    text-align: center;
+    min-width: 120px;
+}
+
+.header-intro-row {
+    background-color: #99badd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 5%;
+    gap: 30px;
+}
+
+
+.header-gradient-pill {
+    width: 250px;
+    height: 200px;
+    border: 5px solid #1a3d7c;
+    border-radius: 50%; 
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.header-gradient-pill img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-intro-text {
+    background-color: #6392b5; 
+    color: white;
+    padding: 30px 40px;
+    border-radius: 80px; 
+    font-size: 1.1rem;
+    line-height: 1.4;
+    max-width: 600px;
 }
