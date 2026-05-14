@@ -98,13 +98,13 @@ body{
 
 .nature-overlay-ellipse{
   position:absolute;
-  right:0;
+  right:200px;
   top:50%;
   transform:translateY(-50%);
   width:40%;
   height:90%;
   background:rgba(255,255,255,0.5);
-  border-radius:50%;
+  border-radius:10%;
 }
 
 .nature-content{
@@ -180,23 +180,22 @@ body{
   border-radius:60px;
 }
 
-.impressions-quote-bg--pink{
-  background:rgba(255,220,220,0.8);
+.impressions-quote-text {
+  position: absolute;
+  background-color:#83011D ;
+  width: 500px;
+  opacity: 0.8;
+  height: 200px;
+  left:500px;
+  top: 2050px;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  text-align: center;
+  color: azure;
 }
 
-.impressions-quote-bg--red{
-  background:rgba(212,61,81,0.6);
-  top:10px;
-  left:10px;
-}
 
-.impressions-quote-text{
-  position:relative;
-  z-index:2;
-  padding:25px 40px;
-  font-size:22px;
-  line-height:1.6;
-}
 
 
 .souvenirs-section{
@@ -253,7 +252,6 @@ body{
   font-size:22px;
   line-height:1.6;
 }
-
 
 .travelcost-section{
   position:relative;
